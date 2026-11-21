@@ -18,7 +18,7 @@ export default function App() {
   const followPointer = (event) => { const rect = event.currentTarget.getBoundingClientRect(); event.currentTarget.style.setProperty('--mouse-x', `${((event.clientX - rect.left) / rect.width) * 100}%`); event.currentTarget.style.setProperty('--mouse-y', `${((event.clientY - rect.top) / rect.height) * 100}%`) }
   return <main onPointerMove={followPointer}>
     <div className="color-spot spot-one"/><div className="color-spot spot-two"/><div className="color-spot spot-three"/>
-    <nav className="nav shell"><a className="aits-brand" href="#suite" aria-label="AITS Sofware Solutions"><img src="/aits-logo.jpeg" alt="AITS Making Softwares Success"/><span>AITS<br/><small>SOFTWARE SOLUTIONS</small></span></a><a className="brand" href="#suite"><span className="brand-mark"><i/><i/><i/></span>converse<span>iq</span></a><div className={`nav-links ${menuOpen ? 'show' : ''}`}><a href="#suite">Products</a><a href="#contact">Contact</a></div><a className="nav-cta" href="#contact">Start a conversation <b>↗</b></a><button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu"><span/><span/></button></nav>
+    <nav className="nav shell"><a className="brand combined-brand" href="#suite" aria-label="ConverseIQ by AITS"><img src="/aits-logo.jpeg" alt="AITS"/><span className="brand-mark"><i/><i/><i/></span>converse<span>iq</span></a><div className={`nav-links ${menuOpen ? 'show' : ''}`}><a href="#suite">Products</a><a href="#contact">Contact</a></div><a className="nav-cta" href="#contact">Start a conversation <b>↗</b></a><button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu"><span/><span/></button></nav>
     <section id="suite" className="suite shell">
       <div className="suite-intro"><div><p className="eyebrow"><i/> THE COMMUNICATION SUITE</p><h1>Everything your<br/><em>conversations need.</em></h1></div><p>Choose a product to enter its workspace. Together, they create one connected customer operation.</p></div>
       <div className="suite-stage">
@@ -29,6 +29,6 @@ export default function App() {
       </div>
     </section>
     <section id="contact" className="contact"><div className="shell contact-inner"><div><p className="eyebrow"><i/> CONNECTED BY DESIGN</p><h2>One suite.<br/><em>Every signal.</em></h2><p className="contact-copy">CRM, AI calling, IVR and helpdesk — connected to help your team respond with context, speed and confidence.</p></div><a className="button bright" href="mailto:hello@converseiq.com">Start a conversation <span>↗</span></a></div></section>
-    <footer className="footer shell"><div className="footer-logos"><img src="/aits-logo.jpeg" alt="AITS"/><a className="brand" href="#suite"><span className="brand-mark"><i/><i/><i/></span>converse<span>iq</span></a></div><p>Communication, connected.</p><span>© 2025 AITS · ConverseIQ</span></footer>
+    <footer className="footer shell"><a className="brand combined-brand" href="#suite"><img src="/aits-logo.jpeg" alt="AITS"/><span className="brand-mark"><i/><i/><i/></span>converse<span>iq</span></a><p>Communication, connected.</p><span>© 2025 ConverseIQ</span></footer>
   </main>
 }
